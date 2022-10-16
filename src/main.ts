@@ -1,11 +1,13 @@
-import "@/assets/css/main.css";
+import "@/assets/css/main.scss";
 
 import { createPinia } from "pinia";
 import { createApp } from "vue";
 
-import AppVue from "./App.vue";
+// import PhosphorVue from "phosphor-vue";
+import App from "./App.vue";
 
-const app = createApp(AppVue);
+const app = createApp(App);
+// app.use(PhosphorVue);
 
 app.use(createPinia());
 
