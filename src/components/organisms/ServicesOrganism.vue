@@ -1,7 +1,7 @@
 <template>
   <div class="services-organism">
     <ServiceMolecule
-      v-for="service in services"
+      v-for="service in $getAllServices"
       :key="service.id"
       :title="service.title"
       :description="service.description"
@@ -13,34 +13,14 @@
 import { defineComponent } from "vue";
 import ServiceMolecule from "../molecules/ServiceMolecule.vue";
 
+import { mapState } from "pinia";
+import { servicesStore } from "@/stores/services";
+
 export default defineComponent({
   components: { ServiceMolecule },
-  data: function () {
-    return {
-      services: [
-        {
-          id: 1,
-          title: "Back-end",
-          description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
-          icon: "fas fa-code",
-        },
-        {
-          id: 2,
-          title: "Front-end",
-          description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
-          icon: "fas fa-paint-brush",
-        },
-        {
-          id: 3,
-          title: "Full-stack",
-          description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
-          icon: "fas fa-chart-line",
-        },
-      ],
-    };
+
+  computed: {
+    ...mapState(servicesStore, ["$getAllServices"]),
   },
 });
 </script>
