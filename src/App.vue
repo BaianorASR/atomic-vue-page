@@ -1,27 +1,14 @@
 <template>
-  <div>
-    <NavBarMolecule />
-    <SearchFormMolecule />
-    <SocialNetworksMolecule />
-    <LogoAtom />
-  </div>
+  <HomeTemplate />
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import { LogoAtom } from "@/components/atoms";
-import {
-  NavBarMolecule,
-  SearchFormMolecule,
-  SocialNetworksMolecule,
-} from "@/components/molecules";
+import HomeTemplate from "./components/templates/HomeTemplate.vue";
 
 export default defineComponent({
   components: {
-    LogoAtom,
-    NavBarMolecule,
-    SearchFormMolecule,
-    SocialNetworksMolecule,
+    HomeTemplate,
   },
 });
 </script>

@@ -10,14 +10,8 @@ import { defineComponent } from "vue";
 export default defineComponent({
   name: "SocialLinkAtom",
   props: {
-    to: {
-      type: String,
-      required: true,
-    },
-    name: {
-      type: String,
-      required: true,
-    },
+    to: { type: String, required: true },
+    name: { type: String, required: true },
   },
 
   computed: {
