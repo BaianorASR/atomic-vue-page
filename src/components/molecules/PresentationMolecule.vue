@@ -7,7 +7,7 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import SocialNetworksMolecule from "../molecules/SocialNetworksMolecule.vue";
+import SocialNetworksMolecule from "./SocialNetworksMolecule.vue";
 
 export default defineComponent({ components: { SocialNetworksMolecule } });
 </script>

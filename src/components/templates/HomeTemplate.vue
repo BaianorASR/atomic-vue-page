@@ -10,7 +10,7 @@
 import { defineComponent } from "vue";
 import ContainerBoson from "../bosons/ContainerBoson.vue";
 import ServicesOrganism from "../organisms/ServicesOrganism.vue";
-import PresentationMolecule from "../organisms/PresentationMolecule.vue";
+import PresentationMolecule from "../molecules/PresentationMolecule.vue";
 import HeaderOrganism from "../organisms/HeaderOrganism.vue";
 
 export default defineComponent({
